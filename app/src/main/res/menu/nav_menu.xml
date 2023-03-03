@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/lobby"
+        android:icon="@drawable/lobby"
+        android:title=""  />
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/chat_m"
+        android:title="" />
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/notifikasi_m"
+        android:title="" />
+
+    <item
+        android:id="@+id/assigment"
+        android:icon="@drawable/assignment_m"
+        android:title="" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile_m"
+        android:title="" />
+
+
+</menu>

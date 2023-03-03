@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFDFDF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LobbyFragment">
+
+
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/bg_atas" />
+
+        <TextView
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Slamet"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="70dp"
+            android:textColor="#fff"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/menuAtas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@+id/nama"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="50dp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/img_chat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/chat" />
+                </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/menuTengah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_below="@+id/menuAtas"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="50dp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="15dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/img_chat1"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/chat" />
+                </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:layout_below="@+id/menuTengah">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/menuTugas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_centerHorizontal="true"
+                            app:cardCornerRadius="10dp"
+                            android:foreground="@drawable/bg_roundrect_ripple_light_border"
+                            app:strokeWidth="10dp"
+                            app:strokeColor="@color/black">
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent">
+                                        <ImageView
+                                            android:id="@+id/assigment"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/logo_assigment"
+                                            android:layout_marginStart="20dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="10dp"/>
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_toEndOf="@+id/assigment"
+                                            android:layout_toStartOf="@+id/createTicket"
+                                            android:layout_marginTop="10dp">
+                                                <TextView
+                                                    android:id="@+id/myTicket"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="My Ticket"
+                                                    android:layout_marginEnd="20dp"
+                                                    android:textStyle="bold"
+                                                    android:textColor="@color/black"
+                                                    />
+
+                                                <TextView
+                                                    android:id="@+id/jumlahTiket"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Ticket : 5"
+                                                    android:layout_marginEnd="20dp"
+                                                    android:layout_below="@id/myTicket"
+                                                    android:textColor="@color/bg_text_black"
+                                                    />
+                                        </RelativeLayout>
+                                        <TextView
+                                            android:id="@+id/createTicket"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:text="+ Create Ticket"
+                                            android:layout_marginTop="20dp"
+                                            android:layout_marginEnd="20dp"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/bg_text_orange"
+                                            />
+                                        <View
+                                            android:id="@+id/line"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="1dp"
+                                            android:background="@color/bg_text_black"
+                                            android:layout_below="@+id/assigment"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/tanggal"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Senin, 3 Oktober 2022"
+                                            android:layout_marginStart="20dp"
+                                            android:layout_marginTop="10dp"
+                                            android:textSize="12sp"
+                                            android:textColor="@color/bg_text_black"
+                                            android:layout_below="@id/line"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/assigne"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Assignee: slamet"
+                                            android:layout_marginEnd="20dp"
+                                            android:layout_marginTop="10dp"
+                                            android:textSize="12sp"
+                                            android:layout_alignParentEnd="true"
+                                            android:textColor="@color/bg_text_black"
+                                            android:layout_below="@id/line"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/Judul"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="T1234 [XPN - EMI][BE] - Riset dan Wireframe Homepage Project"
+                                            android:layout_marginStart="20dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginEnd="20dp"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/black"
+                                            android:layout_below="@id/tanggal"
+                                            />
+                                        <androidx.cardview.widget.CardView
+                                            android:id="@+id/tag1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginStart="20dp"
+                                            android:layout_below="@id/Judul"
+                                            app:cardCornerRadius="10dp"
+                                            android:layout_marginBottom="20dp"
+                                            app:cardBackgroundColor="#1ABE3A31">
+                                                <TextView
+                                                    android:id="@+id/judulTag"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Unbreak Now!"
+                                                    android:layout_margin="10dp"
+                                                    android:textSize="12sp"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:textColor="@color/bg_text_black"
+                                                    />
+                                        </androidx.cardview.widget.CardView>
+                                        <androidx.cardview.widget.CardView
+                                            android:id="@+id/tag2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_below="@id/Judul"
+                                            android:layout_toEndOf="@id/tag1"
+                                            app:cardCornerRadius="10dp"
+                                            android:layout_marginBottom="20dp"
+                                            app:cardBackgroundColor="#08875D">
+                                                <TextView
+                                                    android:id="@+id/judulTag2"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="SP: 1.0"
+                                                    android:layout_margin="10dp"
+                                                    android:textSize="12sp"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:textStyle="bold"
+                                                    android:textColor="@color/white"
+                                                    android:layout_below="@id/line"
+                                                    />
+                                        </androidx.cardview.widget.CardView>
+                                        <TextView
+                                            android:id="@+id/presentase"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="100%"
+                                            android:layout_marginEnd="20dp"
+                                            android:layout_marginTop="20dp"
+                                            android:layout_below="@id/Judul"
+                                            android:textSize="12sp"
+                                            android:layout_alignParentEnd="true"
+                                            android:textColor="@color/bg_text_black"
+                                            />
+                                        <View
+                                            android:id="@+id/line2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="1dp"
+                                            android:background="@color/bg_text_black"
+                                            android:layout_below="@+id/tag1"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/tanggal2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Senin, 3 Oktober 2022"
+                                            android:layout_marginStart="20dp"
+                                            android:layout_marginTop="10dp"
+                                            android:textSize="12sp"
+                                            android:textColor="@color/bg_text_black"
+                                            android:layout_below="@id/line2"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/assigne2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Assignee: slamet"
+                                            android:layout_marginEnd="20dp"
+                                            android:layout_marginTop="10dp"
+                                            android:textSize="12sp"
+                                            android:layout_alignParentEnd="true"
+                                            android:textColor="@color/bg_text_black"
+                                            android:layout_below="@id/line2"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/Judul2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="T1234 [XPN - EMI][BE] - Riset dan Wireframe Homepage Project"
+                                            android:layout_marginStart="20dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginEnd="20dp"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/black"
+                                            android:layout_below="@id/tanggal2"
+                                            />
+                                        <androidx.cardview.widget.CardView
+                                            android:id="@+id/tag1_2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginStart="20dp"
+                                            android:layout_below="@id/Judul2"
+                                            app:cardCornerRadius="10dp"
+                                            android:layout_marginBottom="20dp"
+                                            app:cardBackgroundColor="#1ABE3A31">
+                                                <TextView
+                                                    android:id="@+id/judulTag1_2"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="Unbreak Now!"
+                                                    android:layout_margin="10dp"
+                                                    android:textSize="12sp"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:textColor="@color/bg_text_black"
+                                                    />
+                                        </androidx.cardview.widget.CardView>
+                                        <androidx.cardview.widget.CardView
+                                            android:id="@+id/tag2_2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_below="@id/Judul2"
+                                            android:layout_toEndOf="@id/tag1_2"
+                                            app:cardCornerRadius="10dp"
+                                            android:layout_marginBottom="20dp"
+                                            app:cardBackgroundColor="#08875D">
+                                                <TextView
+                                                    android:id="@+id/judulTag2_2"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:text="SP: 1.0"
+                                                    android:layout_margin="10dp"
+                                                    android:textSize="12sp"
+                                                    android:layout_alignParentEnd="true"
+                                                    android:textStyle="bold"
+                                                    android:textColor="@color/white"
+                                                    android:layout_below="@id/line"
+                                                    />
+                                        </androidx.cardview.widget.CardView>
+                                        <TextView
+                                            android:id="@+id/presentase2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="100%"
+                                            android:layout_marginEnd="20dp"
+                                            android:layout_marginTop="20dp"
+                                            android:layout_below="@id/Judul2"
+                                            android:textSize="12sp"
+                                            android:layout_alignParentEnd="true"
+                                            android:textColor="@color/bg_text_black"
+                                            />
+                                </RelativeLayout>
+
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="60dp">
+
+                                </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+        </FrameLayout>
+</RelativeLayout>
